@@ -1,0 +1,19 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h4 {
+    font-weight: normal;
+   /* Define o peso da fonte como normal (não negrito) */
+  }
+
+  h3 {
+    font-weight: normal;
+  /* Define o peso da fonte como normal (não negrito) */
+  }
+
+.titulo-principal{
+    font-size: 40px;
+}
