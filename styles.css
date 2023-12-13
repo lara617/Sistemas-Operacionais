@@ -2,6 +2,7 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 40px;
     margin-right: 40px;
+    padding: 0;
 }
 
 h4 {
@@ -16,4 +17,21 @@ h4 {
 
 .titulo-principal{
     font-size: 40px;
+}
+
+
+/* Estilo para o contêiner da imagem */
+.imagem-container {
+  display: inline-block; /* Para o contêiner se ajustar ao tamanho da imagem */
+  transition: transform 0.5s ease-in-out; /* Adiciona transição de giro */
+}
+
+/* Estilo para a imagem dentro do contêiner */
+.imagem-container img {
+  width: 600px; /* Para garantir que a imagem não ultrapasse o contêiner */
+}
+
+/* Adiciona o efeito de giro ao passar o mouse */
+.imagem-container:hover {
+  transform: rotate(360deg);
 }
