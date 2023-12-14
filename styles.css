@@ -1,20 +1,37 @@
 body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 40px;
+    background-color: black;
     margin-right: 40px;
     padding: 0;
+      overflow-y: auto;
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    /* Estilos para dispositivos com largura máxima de 600 pixels */
 }
+
 
 h4 {
     font-weight: normal;
+    color: aliceblue;
    /* Define o peso da fonte como normal (não negrito) */
+  }
+
+  h2{
+    color: aliceblue;
   }
 
   h3 {
     font-weight: normal;
+    color: aliceblue;
   /* Define o peso da fonte como normal (não negrito) */
   }
 
+  h1{
+    color: aliceblue;
+  }
 .titulo-principal{
     font-size: 40px;
 }
@@ -35,3 +52,49 @@ h4 {
 .imagem-container:hover {
   transform: rotate(360deg);
 }
+
+
+
+.hidden {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50; /* Cor de fundo verde */
+  color: white; /* Cor do texto branco */
+  padding: 50px /*vertical*/ 100px /*horizontal*/; /* Espaçamento interno do botão */
+  font-size: 30px; /* Tamanho da fonte */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+button:hover {
+  background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+
+
+body, html {
+  padding: 0;
+ /* overflow: hidden;*/
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.rastro {
+  position: absolute;
+  width: 24px; /* Largura do rastro */
+  height: 24px; /* Altura do rastro */
+  transform-origin: center; /* Define o ponto de origem da transformação no centro */
+  transform: scale(0); /* Inicia com escala zero para esconder o rastro inicialmente */
+  transition: transform 0.2s; /* Adiciona transição suave à escala */
+  pointer-events: none; /* Permite que o elemento seja ignorado pelos eventos do mouse */
+}
+
+
