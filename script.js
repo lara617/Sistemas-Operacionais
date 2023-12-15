@@ -27,6 +27,16 @@ function toggleVisibility(id) {
     // Esconde o rastro ao sair da área da janela
     rastro.style.transform = 'scale(0)';
   });
+
+  
+  document.addEventListener('mousemove', function(e) {
+    const mouseX = e.clientX / window.innerWidth - 0.5;
+    const mouseY = e.clientY / window.innerHeight - 0.5;
+  
+    const background = document.getElementById('background');
+    background.style.transform = `translate(${mouseX * 50}px, ${mouseY * 50}px)`;
+  });
+  
   
 //
   //document.addEventListener('DOMContentLoaded', () => {
