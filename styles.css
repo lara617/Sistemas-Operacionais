@@ -1,8 +1,8 @@
 body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 40px;
-    background-color: black;
     margin-right: 40px;
+    background-color: black;
     padding: 0;
       overflow-y: auto;
   }
@@ -60,9 +60,9 @@ h4 {
 }
 
 button {
-  background-color: #4CAF50; /* Cor de fundo verde */
-  color: white; /* Cor do texto branco */
-  padding: 50px /*vertical*/ 100px /*horizontal*/; /* Espaçamento interno do botão */
+  background-color: darkgray; /* Cor de fundo verde */
+  color: black; /* Cor do texto branco */
+  padding: 20px /*vertical*/ 30px /*horizontal*/; /* Espaçamento interno do botão */
   font-size: 30px; /* Tamanho da fonte */
   border: none; /* Sem borda */
   border-radius: 5px; /* Cantos arredondados */
@@ -70,10 +70,8 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
+  background-color: #6aee706b; /* Cor de fundo mais escura ao passar o mouse */
 }
-
-
 
 body, html {
   padding: 0;
