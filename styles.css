@@ -2,11 +2,13 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 80px;
     margin-right: 40px;
-    background-color: black;
     padding: 0;
     height: 100vh;
     overflow-y: auto;
+    position: relative;
     text-align: center;
+    background-size: 100%;
+    cursor:copy;
   }
 
   
@@ -17,25 +19,18 @@ body {
 
 h4 {
     font-weight: normal;
-    color: aliceblue;
    /* Define o peso da fonte como normal (não negrito) */
   }
 
-  h2{
-    color: aliceblue;
-  }
-
-  h3 {
+h3 {
     font-weight: normal;
-    color: aliceblue;
   /* Define o peso da fonte como normal (não negrito) */
   }
-
-  h1{
-    color: aliceblue;
-  }
+  
+  
 .titulo-principal{
     font-size: 40px;
+    transition: color 0.1s ease-in-out;
 }
 
 
@@ -73,18 +68,12 @@ button {
 
 button:hover {
   background-color: #6aee706b; /* Cor de fundo mais escura ao passar o mouse */
+  cursor:-webkit-zoom-in;
 }
 
 body, html {
   padding: 0;
  /* overflow: hidden;*/
-}
-
-.background {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
 }
 
 .rastro {
@@ -97,16 +86,17 @@ body, html {
   pointer-events: none; /* Permite que o elemento seja ignorado pelos eventos do mouse */
 }
 
-
-#background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('seu-background.jpg'); /* Substitua 'seu-background.jpg' pelo caminho do seu arquivo de imagem */
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
 }
 
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+#toggleButton {
+    z-index: 1000; /* Ajuste o valor conforme necessário */
+}

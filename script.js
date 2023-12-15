@@ -7,7 +7,7 @@ function toggleVisibility(id) {
     }
   }
   
-
+//rast//
   document.addEventListener('mousemove', (e) => {
     const rastro = document.querySelector('.rastro');
     const x = e.pageX;
@@ -29,13 +29,63 @@ function toggleVisibility(id) {
   });
 
   
-  document.addEventListener('mousemove', function(e) {
+  //light/dark mode//
+  function toggleMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+}
+
+document.addEventListener('mousemove', (e) => {
+    const rastro = document.querySelector('.rastro');
+    const x = e.pageX;
+    const y = e.pageY;
+
+    rastro.style.left = x - 12 + 'px';
+    rastro.style.top = y - 12 + 'px';
+    rastro.style.transform = 'scale(1)';
+});
+
+document.addEventListener('mouseleave', () => {
+    const rastro = document.querySelector('.rastro');
+    rastro.style.transform = 'scale(0)';
+});
+
+document.addEventListener('mousemove', function(e) {
     const mouseX = e.clientX / window.innerWidth - 0.5;
     const mouseY = e.clientY / window.innerHeight - 0.5;
-  
     const background = document.getElementById('background');
     background.style.transform = `translate(${mouseX * 50}px, ${mouseY * 50}px)`;
+});
+ 
+
+
+
+
+
+//cor do texto//
+function gerarCorAleatoria() {
+  const letrasHex = '0123456789ABCDEF';
+  let cor = '#';
+  for (let i = 0; i < 6; i++) {
+      cor += letrasHex[Math.floor(Math.random() * 16)];
+  }
+  return cor;
+}
+
+function alterarCorParaTodosOsTitulos() {
+  const novaCor = gerarCorAleatoria();
+
+  const titulosPrincipais = document.querySelectorAll('.titulo-principal');
+  titulosPrincipais.forEach(titulo => {
+      titulo.style.color = novaCor;
   });
+}
+
+setInterval(alterarCorParaTodosOsTitulos, 1000);
+
+
+
   
   
 //
